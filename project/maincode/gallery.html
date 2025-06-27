@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shree Modern Academy</title>
+    <meta name="description" content="View photos from Shree Modern Academy showcasing our students, facilities, and events in Bheri-ganga, Surkhet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="navbar.js" defer></script>
+</head>
+<body>
+    <!-- Navbar Injection Point -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>School Gallery</h1>
+            <p>Capturing moments of learning, growth, and joy at Shree Modern Academy</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> / <span>Gallery</span>
+        </div>
+    </div>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="classroom">Classroom</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="facilities">Facilities</button>
+                <button class="filter-btn" data-filter="students">Students</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="grid-container">
+                <div class="grid-item classroom">
+                    <img src="images/gallery/classroom-1.jpg" alt="Students in classroom">
+                    <div class="image-overlay">
+                        <h3>Classroom Learning</h3>
+                        <p>Students engaged in group activity</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events">
+                    <img src="images/gallery/event-1.jpg" alt="School event">
+                    <div class="image-overlay">
+                        <h3>Annual Day</h3>
+                        <p>Cultural performance by grade 4 students</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item sports">
+                    <img src="images/gallery/sports-1.jpg" alt="Sports day">
+                    <div class="image-overlay">
+                        <h3>Sports Day</h3>
+                        <p>Annual sports competition</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item facilities">
+                    <img src="images/gallery/library.jpg" alt="School library">
+                    <div class="image-overlay">
+                        <h3>School Library</h3>
+                        <p>Students reading in the library</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item students">
+                    <img src="images/gallery/students-1.jpg" alt="Students">
+                    <div class="image-overlay">
+                        <h3>Student Council</h3>
+                        <p>Our student representatives</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item classroom">
+                    <img src="images/gallery/classroom-2.jpg" alt="Science class">
+                    <div class="image-overlay">
+                        <h3>Science Class</h3>
+                        <p>Hands-on experiment</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events">
+                    <img src="images/gallery/event-2.jpg" alt="Parents day">
+                    <div class="image-overlay">
+                        <h3>Parents' Day</h3>
+                        <p>Interaction with teachers</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item sports">
+                    <img src="images/gallery/sports-2.jpg" alt="Football match">
+                    <div class="image-overlay">
+                        <h3>Football Match</h3>
+                        <p>Inter-house competition</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item facilities">
+                    <img src="images/gallery/computer-lab.jpg" alt="Computer lab">
+                    <div class="image-overlay">
+                        <h3>Computer Lab</h3>
+                        <p>Students learning digital skills</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item students">
+                    <img src="images/gallery/students-2.jpg" alt="Art class">
+                    <div class="image-overlay">
+                        <h3>Art Exhibition</h3>
+                        <p>Showcasing student creativity</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item classroom">
+                    <img src="images/gallery/classroom-3.jpg" alt="Math class">
+                    <div class="image-overlay">
+                        <h3>Mathematics Class</h3>
+                        <p>Interactive learning</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events">
+                    <img src="images/gallery/event-3.jpg" alt="Teachers day">
+                    <div class="image-overlay">
+                        <h3>Teachers' Day</h3>
+                        <p>Students honoring teachers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-primary">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="video-gallery">
+        <div class="container">
+            <h2 class="section-title">Video Gallery</h2>
+            <p class="section-subtitle">Experience our school through these videos</p>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="images/gallery/video-thumb-1.jpg" alt="Video thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <h3>Annual Day Performance 2024</h3>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="images/gallery/video-thumb-2.jpg" alt="Video thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <h3>Sports Day Highlights</h3>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="images/gallery/video-thumb-3.jpg" alt="Video thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <h3>School Tour</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Album Section -->
+    <section class="photo-albums">
+        <div class="container">
+            <h2 class="section-title">Photo Albums</h2>
+            <p class="section-subtitle">Browse our collections of special events</p>
+            
+            <div class="albums-grid">
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="images/gallery/album-1.jpg" alt="Album cover">
+                        <div class="photos-count">
+                            <i class="fas fa-camera"></i> 45 Photos
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Annual Day 2024</h3>
+                        <p>Cultural performances by our students</p>
+                        <a href="#" class="btn btn-small">View Album</a>
+                    </div>
+                </div>
+                
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="images/gallery/album-2.jpg" alt="Album cover">
+                        <div class="photos-count">
+                            <i class="fas fa-camera"></i> 32 Photos
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Sports Day</h3>
+                        <p>Annual sports competition</p>
+                        <a href="#" class="btn btn-small">View Album</a>
+                    </div>
+                </div>
+                
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="images/gallery/album-3.jpg" alt="Album cover">
+                        <div class="photos-count">
+                            <i class="fas fa-camera"></i> 28 Photos
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Field Trip</h3>
+                        <p>Educational visit to local museum</p>
+                        <a href="#" class="btn btn-small">View Album</a>
+                    </div>
+                </div>
+                
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="images/gallery/album-4.jpg" alt="Album cover">
+                        <div class="photos-count">
+                            <i class="fas fa-camera"></i> 36 Photos
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Science Fair</h3>
+                        <p>Student projects exhibition</p>
+                        <a href="#" class="btn btn-small">View Album</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Shree Modern Academy Logo">
+                    <h3>Shree Modern Academy</h3>
+                </div>
+                <p>Providing quality education since 2010. Our mission is to nurture young minds and prepare them for future success.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Bheri-ganga-9, Jahare, Surkhet</li>
+                    <li><i class="fas fa-phone-alt"></i> +977-9866944780</li>
+                    <li><i class="fas fa-envelope"></i> info@shreemodern.edu.np</li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>School Hours</h3>
+                <ul class="school-hours">
+                    <li>Sunday - Friday: 9:00 AM - 4:00 PM</li>
+                    <li>Saturday: Closed</li>
+                </ul>
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shree Modern Academy. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img src="" alt="" class="lightbox-image">
+            <div class="image-caption">
+                <h3 class="visually-hidden">Image Title</h3>
+                <p></p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

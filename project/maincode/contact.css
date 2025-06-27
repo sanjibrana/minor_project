@@ -1,0 +1,363 @@
+/* Contact Page Styles */
+.contact-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/contact-hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+
+.contact-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+}
+
+.contact-hero p {
+    font-size: 1.3rem;
+    animation: fadeInUp 1s ease;
+}
+
+.breadcrumb {
+    padding: 15px 0;
+    background-color: var(--light-gray);
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--text-light);
+}
+
+.breadcrumb span {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.contact-info-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border-top: 4px solid var(--primary-color);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.info-card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.contact-form-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.contact-form-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.form-container {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 15px 0 25px;
+}
+
+.section-subtitle {
+    text-align: left;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.map-container {
+    height: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.faq-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background-color: var(--light-gray);
+}
+
+.faq-question i {
+    transition: var(--transition);
+}
+
+.faq-question.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 20px 0;
+    line-height: 1.8;
+}
+
+.faq-answer.show {
+    max-height: 500px;
+}
+
+.contact-cta {
+    padding: 80px 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+.contact-cta .btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.contact-cta .btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .contact-info-section,
+body.dark-mode .faq-section {
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+body.dark-mode .contact-form-section {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .info-card,
+body.dark-mode .form-container,
+body.dark-mode .faq-item {
+    background-color: #2a2a2a;
+    color: var(--white);
+}
+
+body.dark-mode .info-card h3,
+body.dark-mode .section-title,
+body.dark-mode .faq-question {
+    color: var(--white);
+}
+
+body.dark-mode label {
+    color: #ccc;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #333;
+    border-color: #444;
+    color: var(--white);
+}
+
+body.dark-mode .faq-question:hover {
+    background-color: #333;
+}
+
+body.dark-mode .breadcrumb {
+    background-color: #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-form-section .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-cta h2 {
+        font-size: 2rem;
+    }
+}
