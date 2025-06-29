@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Shree Modern Academy</title>
-    <meta name="description" content="View photos from Shree Modern Academy showcasing our students, facilities, and events in Bheri-ganga, Surkhet">
+    <meta name="description" content="View photos from Shree Modern Academy">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="gallery.css">
@@ -13,25 +13,21 @@
     <script src="navbar.js" defer></script>
 </head>
 <body>
-    <!-- Navbar Injection Point -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Gallery Hero Section -->
     <section class="gallery-hero">
         <div class="container">
             <h1>School Gallery</h1>
-            <p>Capturing moments of learning, growth, and joy at Shree Modern Academy</p>
+            <p>Capturing moments of learning, growth, and joy</p>
         </div>
     </section>
 
-    <!-- Breadcrumb Navigation -->
     <div class="breadcrumb">
         <div class="container">
             <a href="index.html">Home</a> / <span>Gallery</span>
         </div>
     </div>
 
-    <!-- Gallery Filter -->
     <section class="gallery-filter">
         <div class="container">
             <div class="filter-buttons">
@@ -39,58 +35,39 @@
                 <button class="filter-btn" data-filter="classroom">Classroom</button>
                 <button class="filter-btn" data-filter="events">Events</button>
                 <button class="filter-btn" data-filter="sports">Sports</button>
-                <button class="filter-btn" data-filter="facilities">Facilities</button>
-                <button class="filter-btn" data-filter="students">Students</button>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Grid -->
     <section class="gallery-grid-section">
         <div class="container">
             <div class="grid-container">
                 <!-- Initial 12 items -->
-                <div class="grid-item classroom">
-                    <img src="images/gallery/classroom-1.jpg" alt="Students in classroom">
+                <div class="grid-item classroom" data-index="1">
+                    <img src="images/gallery/classroom-1.jpg" alt="Classroom activity">
                     <div class="image-overlay">
                         <h3>Classroom Learning</h3>
-                        <p>Students engaged in group activity</p>
+                        <p>Students working together</p>
                     </div>
                 </div>
                 
-                <div class="grid-item events">
+                <div class="grid-item events" data-index="2">
                     <img src="images/gallery/event-1.jpg" alt="School event">
                     <div class="image-overlay">
                         <h3>Annual Day</h3>
-                        <p>Cultural performance by grade 4 students</p>
+                        <p>Cultural performance</p>
                     </div>
                 </div>
                 
-                <div class="grid-item sports">
+                <div class="grid-item sports" data-index="3">
                     <img src="images/gallery/sports-1.jpg" alt="Sports day">
                     <div class="image-overlay">
                         <h3>Sports Day</h3>
-                        <p>Annual sports competition</p>
+                        <p>Annual competition</p>
                     </div>
                 </div>
                 
-                <div class="grid-item facilities">
-                    <img src="images/gallery/library.jpg" alt="School library">
-                    <div class="image-overlay">
-                        <h3>School Library</h3>
-                        <p>Students reading in the library</p>
-                    </div>
-                </div>
-                
-                <div class="grid-item students">
-                    <img src="images/gallery/students-1.jpg" alt="Students">
-                    <div class="image-overlay">
-                        <h3>Student Council</h3>
-                        <p>Our student representatives</p>
-                    </div>
-                </div>
-                
-                <div class="grid-item classroom">
+                <div class="grid-item classroom" data-index="4">
                     <img src="images/gallery/classroom-2.jpg" alt="Science class">
                     <div class="image-overlay">
                         <h3>Science Class</h3>
@@ -98,15 +75,15 @@
                     </div>
                 </div>
                 
-                <div class="grid-item events">
+                <div class="grid-item events" data-index="5">
                     <img src="images/gallery/event-2.jpg" alt="Parents day">
                     <div class="image-overlay">
                         <h3>Parents' Day</h3>
-                        <p>Interaction with teachers</p>
+                        <p>Meeting with teachers</p>
                     </div>
                 </div>
                 
-                <div class="grid-item sports">
+                <div class="grid-item sports" data-index="6">
                     <img src="images/gallery/sports-2.jpg" alt="Football match">
                     <div class="image-overlay">
                         <h3>Football Match</h3>
@@ -114,35 +91,52 @@
                     </div>
                 </div>
                 
-                <div class="grid-item facilities">
-                    <img src="images/gallery/computer-lab.jpg" alt="Computer lab">
-                    <div class="image-overlay">
-                        <h3>Computer Lab</h3>
-                        <p>Students learning digital skills</p>
-                    </div>
-                </div>
-                
-                <div class="grid-item students">
-                    <img src="images/gallery/students-2.jpg" alt="Art class">
-                    <div class="image-overlay">
-                        <h3>Art Exhibition</h3>
-                        <p>Showcasing student creativity</p>
-                    </div>
-                </div>
-                
-                <div class="grid-item classroom">
+                <div class="grid-item classroom" data-index="7">
                     <img src="images/gallery/classroom-3.jpg" alt="Math class">
                     <div class="image-overlay">
-                        <h3>Mathematics Class</h3>
+                        <h3>Mathematics</h3>
                         <p>Interactive learning</p>
                     </div>
                 </div>
                 
-                <div class="grid-item events">
+                <div class="grid-item events" data-index="8">
                     <img src="images/gallery/event-3.jpg" alt="Teachers day">
                     <div class="image-overlay">
                         <h3>Teachers' Day</h3>
                         <p>Students honoring teachers</p>
+                    </div>
+                </div>
+                
+                <!-- Hidden items that will be shown on Load More -->
+                <div class="grid-item sports hidden" data-index="9">
+                    <img src="images/gallery/sports-3.jpg" alt="Running race">
+                    <div class="image-overlay">
+                        <h3>Running Race</h3>
+                        <p>Annual sports event</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item classroom hidden" data-index="10">
+                    <img src="images/gallery/classroom-4.jpg" alt="Art class">
+                    <div class="image-overlay">
+                        <h3>Art Class</h3>
+                        <p>Creative expression</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item events hidden" data-index="11">
+                    <img src="images/gallery/event-4.jpg" alt="Prize distribution">
+                    <div class="image-overlay">
+                        <h3>Prize Day</h3>
+                        <p>Award ceremony</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item sports hidden" data-index="12">
+                    <img src="images/gallery/sports-4.jpg" alt="Basketball">
+                    <div class="image-overlay">
+                        <h3>Basketball</h3>
+                        <p>Team sports</p>
                     </div>
                 </div>
             </div>
@@ -154,119 +148,27 @@
             </div>
         </div>
     </section>
-
-    <!-- Video Gallery -->
-    <section class="video-gallery">
-        <div class="container">
-            <h2 class="section-title">Video Gallery</h2>
-            <p class="section-subtitle">Experience our school through these videos</p>
-            
-            <div class="video-grid">
-                <div class="video-item">
-                    <div class="video-thumbnail">
-                        <img src="images/gallery/video-thumb-1.jpg" alt="Video thumbnail">
-                        <div class="play-button">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <h3>Annual Day Performance 2024</h3>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-thumbnail">
-                        <img src="images/gallery/video-thumb-2.jpg" alt="Video thumbnail">
-                        <div class="play-button">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <h3>Sports Day Highlights</h3>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-thumbnail">
-                        <img src="images/gallery/video-thumb-3.jpg" alt="Video thumbnail">
-                        <div class="play-button">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <h3>School Tour</h3>
-                </div>
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img src="" alt="" class="lightbox-image">
+            <div class="image-caption">
+                <h3 aria-live="polite">Image Title</h3>
+                <p></p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
-    </section>
-
-    <!-- Photo Album Section -->
-    <section class="photo-albums">
-        <div class="container">
-            <h2 class="section-title">Photo Albums</h2>
-            <p class="section-subtitle">Browse our collections of special events</p>
-            
-            <div class="albums-grid">
-                <div class="album-card">
-                    <div class="album-cover">
-                        <img src="images/gallery/album-1.jpg" alt="Album cover">
-                        <div class="photos-count">
-                            <i class="fas fa-camera"></i> 45 Photos
-                        </div>
-                    </div>
-                    <div class="album-info">
-                        <h3>Annual Day 2024</h3>
-                        <p>Cultural performances by our students</p>
-                        <a href="#" class="btn btn-small">View Album</a>
-                    </div>
-                </div>
-                
-                <div class="album-card">
-                    <div class="album-cover">
-                        <img src="images/gallery/album-2.jpg" alt="Album cover">
-                        <div class="photos-count">
-                            <i class="fas fa-camera"></i> 32 Photos
-                        </div>
-                    </div>
-                    <div class="album-info">
-                        <h3>Sports Day</h3>
-                        <p>Annual sports competition</p>
-                        <a href="#" class="btn btn-small">View Album</a>
-                    </div>
-                </div>
-                
-                <div class="album-card">
-                    <div class="album-cover">
-                        <img src="images/gallery/album-3.jpg" alt="Album cover">
-                        <div class="photos-count">
-                            <i class="fas fa-camera"></i> 28 Photos
-                        </div>
-                    </div>
-                    <div class="album-info">
-                        <h3>Field Trip</h3>
-                        <p>Educational visit to local museum</p>
-                        <a href="#" class="btn btn-small">View Album</a>
-                    </div>
-                </div>
-                
-                <div class="album-card">
-                    <div class="album-cover">
-                        <img src="images/gallery/album-4.jpg" alt="Album cover">
-                        <div class="photos-count">
-                            <i class="fas fa-camera"></i> 36 Photos
-                        </div>
-                    </div>
-                    <div class="album-info">
-                        <h3>Science Fair</h3>
-                        <p>Student projects exhibition</p>
-                        <a href="#" class="btn btn-small">View Album</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Shree Modern Academy Logo">
+                    <img src="images/schoolLogo.png" alt="Shree Modern Academy Logo">
                     <h3>Shree Modern Academy</h3>
                 </div>
                 <p>Providing quality education since 2010. Our mission is to nurture young minds and prepare them for future success.</p>
@@ -293,8 +195,8 @@
                 <h3>Contact Info</h3>
                 <ul class="contact-info">
                     <li><i class="fas fa-map-marker-alt"></i> Bheri-ganga-9, Jahare, Surkhet</li>
-                    <li><i class="fas fa-phone-alt"></i> +977-9866944780</li>
                     <li><i class="fas fa-envelope"></i> info@shreemodern.edu.np</li>
+                    <li><i class="fas fa-phone-alt"></i>+977-9866944780</li>
                 </ul>
             </div>
             
@@ -322,22 +224,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox-modal">
-        <div class="lightbox-content">
-            <span class="close-lightbox">&times;</span>
-            <img src="" alt="" class="lightbox-image">
-            <div class="image-caption">
-                <h3 class="visually-hidden">Image Title</h3>
-                <p></p>
-            </div>
-            <div class="lightbox-nav">
-                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
     <script src="gallery.js"></script>
