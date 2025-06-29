@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event listeners to tab buttons
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Remove active class from all buttons
+            // Remove active class from all buttons/         
             tabButtons.forEach(btn => btn.classList.remove('active'));
             
             // Add active class to clicked button

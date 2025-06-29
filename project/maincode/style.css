@@ -112,7 +112,7 @@ ul {
 }
 
 .btn-primary:hover {
-    background-color: transparent;
+    background-color: var(--white);
     color: var(--primary-color);
     transform: translateY(-3px);
     box-shadow: var(--box-shadow);
@@ -369,6 +369,10 @@ ul {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+}
+.hero-buttons .btn-primary:hover{
+    background-color: transparent;
+    color: var(--primary-color);
 }
 
 @keyframes fadeInUp {
@@ -708,12 +712,13 @@ footer {
 
 .footer-logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
 
 .footer-logo img {
-    width: 50px;
+    width: 100px;
     height: auto;
     margin-right: 15px;
 }
@@ -753,6 +758,13 @@ footer {
 .footer-column ul li a:hover {
     color: var(--primary-color);
     padding-left: 8px;
+}
+.footer-column .footer-social a{
+    color: var(--white);
+}
+.footer-column .footer-social a:hover{
+    color: var(--primary-color);
+    transition: var(--transition);
 }
 
 .contact-info li {
@@ -822,14 +834,12 @@ footer {
 .footer-links a:hover {
     color: var(--primary-color);
 }
-
-/* =============== FIXED DARK MODE STYLES =============== */
+/* Dark mode for all content sections */
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
 }
 
-/* Dark mode for all content sections */
 body.dark-mode .principal-desk,
 body.dark-mode .features-section,
 body.dark-mode .about-preview,
