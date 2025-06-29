@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.querySelector('.next-btn');
     
     let currentImageIndex = 0;
-    const images = Array.from(document.querySelectorAll('.grid-item'));
+    let images = Array.from(document.querySelectorAll('.grid-item'));
     
     // Open lightbox when clicking on gallery image
     galleryItems.forEach((item, index) => {
@@ -104,6 +104,74 @@ document.addEventListener('DOMContentLoaded', function() {
         lightboxDesc.textContent = desc;
     }
     
+    // Load More Button Functionality
+    const loadMoreBtn = document.querySelector('.load-more button');
+    const gridContainer = document.querySelector('.grid-container');
+    let currentItems = 12; // Initial number of items displayed
+    const totalItems = 24; // Total items available (can be fetched from server in real implementation)
+
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            // Show loading state
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            this.disabled = true;
+            
+            // Simulate loading delay (in real implementation, this would be an AJAX call)
+            setTimeout(() => {
+                // Create new items to add
+                const itemsToAdd = Math.min(6, totalItems - currentItems);
+                
+                if (itemsToAdd > 0) {
+                    // Create new gallery items (in real implementation, these would come from server)
+                    for (let i = currentItems; i < currentItems + itemsToAdd; i++) {
+                        const newItem = document.createElement('div');
+                        newItem.className = 'grid-item new-item';
+                        // Alternate between different categories for demo purposes
+                        const categories = ['classroom', 'events', 'sports', 'facilities', 'students'];
+                        const category = categories[i % categories.length];
+                        newItem.classList.add(category);
+                        
+                        newItem.innerHTML = `
+                            <img src="images/gallery/placeholder-${i+1}.jpg" alt="Gallery image ${i+1}">
+                            <div class="image-overlay">
+                                <h3>Image ${i+1}</h3>
+                                <p>Category: ${category}</p>
+                            </div>
+                        `;
+                        
+                        // Add click event for lightbox
+                        newItem.addEventListener('click', function() {
+                            currentImageIndex = i;
+                            updateLightbox();
+                            lightboxModal.style.display = 'block';
+                            document.body.style.overflow = 'hidden';
+                        });
+                        
+                        gridContainer.appendChild(newItem);
+                    }
+                    
+                    // Update the images array for lightbox navigation
+                    images = Array.from(document.querySelectorAll('.grid-item'));
+                    
+                    currentItems += itemsToAdd;
+                    
+                    // Update button text if all items are loaded
+                    if (currentItems >= totalItems) {
+                        this.innerHTML = 'All Items Loaded';
+                        this.style.opacity = '0.7';
+                        this.style.cursor = 'default';
+                        return;
+                    }
+                }
+                
+                // Reset button state
+                this.innerHTML = '<i class="fas fa-plus"></i> Load More';
+                this.disabled = false;
+                
+            }, 800); // Simulate network delay
+        });
+    }
+    
     // Video play buttons (placeholder functionality)
     const videoThumbnails = document.querySelectorAll('.video-thumbnail');
     videoThumbnails.forEach(thumbnail => {
@@ -111,12 +179,4 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Video playback would open here. In a real implementation, this would embed a YouTube/Vimeo player or open a video file.');
         });
     });
-    
-    // Load more button (placeholder functionality)
-    const loadMoreBtn = document.querySelector('.load-more button');
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
-            alert('In a real implementation, this would load additional gallery items via AJAX or show hidden items.');
-        });
-    }
 });

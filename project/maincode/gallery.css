@@ -86,6 +86,7 @@
     overflow: hidden;
     height: 250px;
     box-shadow: var(--box-shadow);
+    transition: var(--transition);
 }
 
 .grid-item img {
@@ -134,9 +135,56 @@
     transform: translateY(0);
 }
 
+/* Load More Button Styles */
 .load-more {
     text-align: center;
     margin-top: 40px;
+    transition: var(--transition);
+}
+
+.load-more button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.load-more button:hover:not(:disabled) {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.load-more button:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+}
+
+.load-more button.loading {
+    background-color: var(--primary-dark);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* New items animation */
+.grid-item.new-item {
+    animation: fadeIn 0.5s ease forwards;
 }
 
 .video-gallery {
@@ -371,6 +419,14 @@ body.dark-mode .album-info h3 {
 
 body.dark-mode .album-info p {
     color: #ccc;
+}
+
+body.dark-mode .load-more button {
+    background-color: var(--accent-color);
+}
+
+body.dark-mode .load-more button:hover:not(:disabled) {
+    background-color: #c0392b;
 }
 
 /* Responsive Design */
